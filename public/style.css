@@ -14,25 +14,48 @@ body {
     background-color: #75b1bf;
     width: 600px;
     height: 500px;
-    padding: 40px;
+    /* max-height: 80vh; */
+    padding: 50px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
 }
-
 h1 {
     font-size: 36px;
     text-align: center;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title-icon {
+    margin-right: 10px; /* Space between the text and the icon */
+    width: 60px; /* Adjust the width of the icon */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* New container for background */
 .todo-container {
-    background-color: #e8f0fe; 
+    background-color: #e8f0fe;
     padding: 30px;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    flex-grow: 1;
 }
 
+/* Limit the height of the task list so scrolling occurs inside */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 100%;
+}
+
+/* Form styling */
 form {
     display: flex;
     justify-content: space-between;
@@ -58,14 +81,10 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #055d76;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
+/* Task list styling */
 li {
     background-color: #f1f1f1;
     margin: 10px 0;
@@ -73,15 +92,24 @@ li {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 5px;
+    flex-wrap: wrap;
 }
+
+li span {
+    flex-grow: 1;
+    word-wrap: break-word;
+    margin-right: 20px;
+}
+
 
 .completed {
     text-decoration: line-through;
     color: #999;
 }
 
+/* Buttons */
 .complete-btn, .delete-btn {
     background-color: #007bff;
     color: white;
