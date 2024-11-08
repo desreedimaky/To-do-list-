@@ -2,6 +2,7 @@
 const form = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
+app.use(express.static('public'));
 
 // Fetch initial tasks from server
 fetch('/tasks')
@@ -14,12 +15,12 @@ fetch('/tasks')
 form.addEventListener('submit', event => {
     event.preventDefault();
     
-    const taskText = todoInput.value.trim(); // Trim white spaces from the input
+    const taskText = todoInput.value.trim(); 
 
     // Check if input is empty
     if (taskText === "") {
-        alert("Task cannot be empty!"); // Show an alert if task is empty
-        return; // Exit the function if no text is entered
+        alert("Task cannot be empty!"); 
+        return; 
     }
 
     const task = {
@@ -38,12 +39,12 @@ form.addEventListener('submit', event => {
     .then(response => response.json())
     .then(data => {
         if (data.error) {
-            // Display error if duplicate
+            
             alert(data.error);
         } else {
-            // Add task to DOM
+           
             addTaskToDOM(data);
-            todoInput.value = '';  // Clear the input field
+            todoInput.value = '';
         }
     });
 });
@@ -51,21 +52,25 @@ form.addEventListener('submit', event => {
 // Function to add task to the DOM
 function addTaskToDOM(task) {
     const li = document.createElement('li');
+    const taskText = document.createElement('span');
+    taskText.textContent = task.text;
+
     li.innerHTML = `
-        <span>${task.text}</span>
         <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
     `;
 
+    li.prepend(taskText);
+
     if (task.completed) {
-        li.classList.add('completed');
+        taskText.classList.add('completed');
     }
 
-    todoList.appendChild(li);
+    document.getElementById('todo-list').appendChild(li);
 
-    // Event listeners for task actions
+    
     li.querySelector('.complete-btn').addEventListener('click', () => {
-        li.classList.toggle('completed');
+        taskText.classList.toggle('completed');
         fetch(`/complete-task/${task.id}`, { method: 'PUT' });
     });
 
@@ -74,4 +79,3 @@ function addTaskToDOM(task) {
         fetch(`/delete-task/${task.id}`, { method: 'DELETE' });
     });
 }
-
