@@ -1,9 +1,9 @@
 # To-do-list-
 
-#Project Overview
+# Project Overview
 This project is a **To-Do List** web application built using HTML, CSS, JavaScript (ES6), and Node.js. The app allows users to add, mark as complete, and delete tasks from a dynamic to-do list. It also ensures that duplicate tasks are not allowed and the list is saved for the user's session.
 
-#Features:
+# Features:
 - **Add Task**: Users can add new tasks to the to-do list.
 - **Prevent Duplicate Tasks**: Duplicate tasks are not allowed in the list.
 - **Mark Task as Complete**: Users can mark tasks as completed, which strikes through the task text.
@@ -30,7 +30,7 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 #Prerequisites
 - **Node.js** installed on your system. If not, download and install it from [here](https://nodejs.org/).
 
-#Steps to Run Locally:
+# Steps to Run Locally:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/yourusername/todo-list-app.git
