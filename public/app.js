@@ -2,7 +2,6 @@
 const form = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
-app.use(express.static('public'));
 
 // Fetch initial tasks from server
 fetch('/tasks')
@@ -14,13 +13,13 @@ fetch('/tasks')
 // Add event listener for form submission
 form.addEventListener('submit', event => {
     event.preventDefault();
-    
-    const taskText = todoInput.value.trim(); 
+
+    const taskText = todoInput.value.trim();
 
     // Check if input is empty
     if (taskText === "") {
-        alert("Task cannot be empty!"); 
-        return; 
+        alert("Task cannot be empty!");
+        return;
     }
 
     const task = {
@@ -39,10 +38,8 @@ form.addEventListener('submit', event => {
     .then(response => response.json())
     .then(data => {
         if (data.error) {
-            
             alert(data.error);
         } else {
-           
             addTaskToDOM(data);
             todoInput.value = '';
         }
@@ -68,12 +65,13 @@ function addTaskToDOM(task) {
 
     document.getElementById('todo-list').appendChild(li);
 
-    
+    // Handle completion of task
     li.querySelector('.complete-btn').addEventListener('click', () => {
         taskText.classList.toggle('completed');
         fetch(`/complete-task/${task.id}`, { method: 'PUT' });
     });
 
+    // Handle deletion of task
     li.querySelector('.delete-btn').addEventListener('click', () => {
         li.remove();
         fetch(`/delete-task/${task.id}`, { method: 'DELETE' });
