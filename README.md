@@ -18,7 +18,7 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 - **Prevent Duplicate Tasks**: If you try to add a task that already exists in the list, the app will notify you and prevent adding it again.
 
 
-#Tech Stack
+# Tech Stack
 - **Frontend**: HTML, CSS, JavaScript (ES6)
 - **Backend**: Node.js with Express.js (for serving the app)
 - **Styling**: Custom CSS for design and layout
