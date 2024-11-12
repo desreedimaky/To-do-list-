@@ -11,6 +11,12 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 - **Responsive Design**: The layout adjusts for different screen sizes, ensuring usability on smaller screens.
 - **Node.js Backend**: The app uses Node.js to serve the static files and manage tasks.
 
+#How to Use
+-Add Task: Enter a task in the input box and click Add Task. The task will be added to the list below.
+-Mark Complete: Click on the Complete button next to a task to mark it as complete. The task text will be struck through.
+-Delete Task: Click on the Delete button to remove the task from the list.
+-Prevent Duplicate Tasks: If you try to add a task that already exists in the list, the app will notify you and prevent adding it again.
+
 
 #Tech Stack
 - **Frontend**: HTML, CSS, JavaScript (ES6)
@@ -64,9 +70,4 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 ├── package.json             # Node.js project dependencies and scripts
 └── README.md                # This file (Project documentation)
 
-#How to Use
->Add Task: Enter a task in the input box and click Add Task. The task will be added to the list below.
->Mark Complete: Click on the Complete button next to a task to mark it as complete. The task text will be struck through.
->Delete Task: Click on the Delete button to remove the task from the list.
->Prevent Duplicate Tasks: If you try to add a task that already exists in the list, the app will notify you and prevent adding it again.
 
