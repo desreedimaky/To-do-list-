@@ -40,7 +40,7 @@ app.post('/add-task', (req, res) => {
         res.json({ error: 'Task already exists!' });
     } else {
         const newTask = {
-            id: tasks.length + 1,  // Assign a unique ID based on array length
+            id: Date.now(),  // Use unique ID based on timestamp
             text: req.body.text,
             completed: req.body.completed || false
         };
