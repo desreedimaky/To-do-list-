@@ -55,7 +55,7 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 
 ---
 ## Contact
-- **Linked in** : in/desree-madiba-3880b6272
+- **Linked in** : https://www.linkedin.com/in/desree-madiba-3880b6272/
 - **Email** : desreedimaky@gmail.com
 
 
