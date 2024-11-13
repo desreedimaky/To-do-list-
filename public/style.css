@@ -1,7 +1,8 @@
 /* General page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    background-image: url('/images/to-do-list-background.jpg');
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +12,7 @@ body {
 }
 
 .container {
-    background-color: #75b1bf;
+    background-color: #546caf;
     width: 600px;
     height: 500px;
     padding: 50px;
@@ -24,7 +25,7 @@ body {
 h1 {
     font-size: 36px;
     text-align: center;
-    color: #333;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +72,7 @@ input[type="text"] {
 button {
     padding: 15px 20px;
     font-size: 18px;
-    background-color: #055d76;
+    background-color: #210548;
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,7 +80,7 @@ button {
 }
 
 button:hover {
-    background-color: #055d76;
+    background-color: #210548;
 }
 
 li {
@@ -123,7 +124,7 @@ li:hover span {
 }
 
 .complete-btn, .delete-btn {
-    background-color: #007bff;
+    background-color:  #40E0D0;
     color: white;
     border: none;
     padding: 10px;
@@ -143,11 +144,11 @@ li:hover span {
 }
 
 .delete-btn {
-    background-color: #dc3545;
+    background-color: #332975;
 }
 
 .delete-btn:hover {
-    background-color: #c82333;
+    background-color: #0056b3;
 }
 
 @media (max-width: 600px) {
