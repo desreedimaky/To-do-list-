@@ -63,7 +63,7 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 
 ```bash
 .
-/your-todo-list-project/
+/todo-list-project/
 │
 ├── .vscode/               # Visual Studio Code configuration folder
 │   ├── settings.json      # Editor settings specific to the project
@@ -74,9 +74,9 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 │
 ├── public/                # Public-facing files (served by the server)
 │   ├── images/            # Folder for images used in the project
-│   ├── app.js             # Client-side JavaScript
+│   ├── app.js             # Contains the frontend JavaScript logic
 │   ├── index.html         # Main HTML file for the To-Do list app
-│   └── style.css          # Styling for the To-Do list app
+│   └── style.css          # Contains the styles for the To-Do List UI
 │
 ├── package-lock.json      # Auto-generated file tracking package dependencies
 ├── package.json           # Project metadata and dependencies
