@@ -54,6 +54,10 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
     Open your browser and visit `http://localhost:3000` to see the To-Do List application in action.
 
 ---
+## Contact
+-**Linked in** : in/desree-madiba-3880b6272
+-**Email** : desreedimaky@gmail.com
+
 
 ## Project Structure
 
@@ -69,5 +73,3 @@ This project is a **To-Do List** web application built using HTML, CSS, JavaScri
 ├── server.js                # Backend logic with Node.js and Express.js
 ├── package.json             # Node.js project dependencies and scripts
 └── README.md                # This file (Project documentation)
-
-
